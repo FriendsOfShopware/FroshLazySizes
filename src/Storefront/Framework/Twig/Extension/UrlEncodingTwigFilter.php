@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Frosh\ThumbnailProcessor\Storefront\Framework\Twig\Extension;
+namespace Frosh\LazySizes\Storefront\Framework\Twig\Extension;
 
 use Shopware\Core\Content\Media\MediaEntity;
 use Twig\Extension\AbstractExtension;

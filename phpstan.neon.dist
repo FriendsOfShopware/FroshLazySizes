@@ -6,8 +6,5 @@ parameters:
     symfony:
         constant_hassers: false
 
-    ignoreErrors:
-        - '#Frosh\\ThumbnailProcessor\\Service\\ThumbnailServiceDecorator::__construct\(\) does not call parent constructor from Shopware\\Core\\Content\\Media\\Thumbnail\\ThumbnailService.#'
-
     excludes_analyse:
         - bin/phpstan-config-generator.php

@@ -18,14 +18,12 @@
         "en": [
             "thumbnail",
             "performance",
-            "storage",
-            "webp"
+            "lazyloading",
         ],
         "de": [
             "thumbnail",
             "performance",
-            "storage",
-            "webp"
+            "lazyloading"
         ]
     }
 }

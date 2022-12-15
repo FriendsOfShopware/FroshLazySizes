@@ -5,32 +5,7 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <service id="Frosh\ThumbnailProcessor\Service\UrlGeneratorDecorator"
-                 decorates="Shopware\Core\Content\Media\Pathname\UrlGeneratorInterface">
-            <argument type="service" id="Frosh\ThumbnailProcessor\Service\UrlGeneratorDecorator.inner"/>
-            <argument type="service" id="Frosh\ThumbnailProcessor\Service\ThumbnailUrlTemplateInterface"/>
-            <argument type="service" id="request_stack"/>
-            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
-            <argument>%shopware.filesystem.public.url%</argument>
-
-            <tag name="kernel.reset" method="reset"/>
-        </service>
-
-        <service id="Frosh\ThumbnailProcessor\Service\ThumbnailUrlTemplateInterface"
-                 class="Frosh\ThumbnailProcessor\Service\ThumbnailUrlTemplate">
-            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
-        </service>
-
-        <service id="Frosh\ThumbnailProcessor\Service\ThumbnailServiceDecorator"
-                 decorates="Shopware\Core\Content\Media\Thumbnail\ThumbnailService">
-            <argument type="service" id="media_thumbnail.repository"/>
-            <argument type="service" id="shopware.filesystem.public"/>
-            <argument type="service" id="shopware.filesystem.private"/>
-            <argument type="service" id="Shopware\Core\Content\Media\Pathname\UrlGeneratorInterface"/>
-            <argument type="service" id="media_folder.repository"/>
-        </service>
-
-        <service id="Frosh\ThumbnailProcessor\Storefront\Framework\Twig\Extension\UrlEncodingTwigFilter" public="false">
+        <service id="Frosh\LazySizes\Storefront\Framework\Twig\Extension\UrlEncodingTwigFilter" public="false">
             <tag name="twig.extension"/>
         </service>
     </services>

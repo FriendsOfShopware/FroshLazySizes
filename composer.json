@@ -1,17 +1,12 @@
 {
-    "name": "frosh/platform-thumbnail-processor",
+    "name": "frosh/lazy-sizes",
     "keywords": [
         "shopware",
-        "backend",
-        "admin",
         "media",
-        "media manager",
-        "cdn",
-        "storage",
         "thumbnail"
     ],
-    "description": "This plugins allows you to use variable thumbnails, without having them on storage.",
-    "version": "1.1.2",
+    "description": "Automatically calculate the best thumbnail size. This means you don't have to worry about the \"sizes\" attribute for the images. Additionally, you gain a score.",
+    "version": "1.0.0",
     "type": "shopware-platform-plugin",
     "license": "mit",
     "authors": [
@@ -24,27 +19,27 @@
         "shopware/core": "^6.4.10"
     },
     "extra": {
-        "shopware-plugin-class": "Frosh\\ThumbnailProcessor\\FroshPlatformThumbnailProcessor",
+        "shopware-plugin-class": "Frosh\\LazySizes\\FroshLazySizes",
         "label": {
-            "de-DE": "ThumbnailProcessor mit Lazy Loading und Webp-Unterstützung",
-            "en-GB": "ThumbnailProcessor incl. Lazy Loading and Webp-Support"
+            "de-DE": "LazySizes und LazyLoading für passende Bilder-Sizes",
+            "en-GB": "LazySizes and LazyLoading for suitable image sizes"
         },
         "description": {
-            "de-DE": "Verschwende keine Rechenleistung und keinen Speicherplatz mit Thumbnails! Lass diese in Echtzeit beim Besuch durch einen externen Dienst erzeugen und ausliefern.",
-            "en-GB": "Don't waste the computing power and space with thumbnails! Have the thumbnails generated and delivered in real time when you visit an external service."
+            "de-DE": "Lass die beste Thumbnail-Größe automatisch berechnen. Dadurch musst du dir keine Gedanken um das Attribut \"sizes\" bei den Bildern zu machen und gewinnst an Score.",
+            "en-GB": "Automatically calculate the best thumbnail size. This means you don't have to worry about the \"sizes\" attribute for the images. Additionally, you gain a score."
         },
         "manufacturerLink": {
-            "de-DE": "https://github.com/FriendsOfShopware/FroshPlatformThumbnailProcessor",
-            "en-GB": "https://github.com/FriendsOfShopware/FroshPlatformThumbnailProcessor"
+            "de-DE": "https://github.com/FriendsOfShopware/FroshLazySizes",
+            "en-GB": "https://github.com/FriendsOfShopware/FroshLazySizes"
         },
         "supportLink": {
-            "de-DE": "https://github.com/FriendsOfShopware/FroshPlatformThumbnailProcessor/issues",
-            "en-GB": "https://github.com/FriendsOfShopware/FroshPlatformThumbnailProcessor/issues"
+            "de-DE": "https://github.com/FriendsOfShopware/FroshLazySizes/issues",
+            "en-GB": "https://github.com/FriendsOfShopware/FroshLazySizes/issues"
         }
     },
     "autoload": {
         "psr-4": {
-            "Frosh\\ThumbnailProcessor\\": "src/"
+            "Frosh\\LazySizes\\": "src/"
         }
     }
 }
