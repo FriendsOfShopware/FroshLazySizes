@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "shopware/core": "^6.4.10"
+        "shopware/core": "~6.5.0"
     },
     "extra": {
         "shopware-plugin-class": "Frosh\\LazySizes\\FroshLazySizes",
@@ -40,6 +40,12 @@
     "autoload": {
         "psr-4": {
             "Frosh\\LazySizes\\": "src/"
+        }
+    },
+    "minimum-stability": "RC",
+    "config": {
+        "allow-plugins": {
+            "symfony/runtime": true
         }
     }
 }
