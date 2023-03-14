@@ -1,4 +1,4 @@
-# Thumbnail Processor for Shopware 6
+# LazySizes for Shopware 6
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md) [![Shopware Store](https://img.shields.io/badge/shopware-store-blue.svg?style=flat-square)](https://store.shopware.com/en/search?sSearch=FroshLazySizes)
  
