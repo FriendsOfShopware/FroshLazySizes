@@ -13,3 +13,4 @@ jobs:
       accountUser: ${{ secrets.ACCOUNT_USER }}
       accountPassword: ${{ secrets.ACCOUNT_PASSWORD }}
       ghToken: ${{ secrets.GITHUB_TOKEN }}
+      cliVersion: '0.1.61'
