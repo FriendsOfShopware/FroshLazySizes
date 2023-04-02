@@ -30,43 +30,49 @@ class UrlEncodingTwigFilter extends AbstractExtension
             return $mediaUrl;
         }
 
-        // we encode just parts after "/media/" to add support for imgproxy and paths which always need to be encoded
-        $paths = \explode('/media/', $urlInfo['path']);
+        $mediaParts = ['media', 'thumbnail'];
 
-        if (count($paths) < 2) {
-            return $mediaUrl;
+        foreach ($mediaParts as $mediaPart) {
+            // we encode just parts after "/media/" and "/thumbnail/" to add support for imgproxy and paths which always need to be encoded
+            $paths = \explode(\sprintf('/%s/', $mediaPart), $urlInfo['path']);
+
+            if (count($paths) < 2) {
+                continue;
+            }
+
+            $paths[0] .= '/' . $mediaPart;
+
+            $relativeImagePath = $paths[1];
+
+            $relativeImagePathSegments = explode('/', $relativeImagePath);
+            foreach ($relativeImagePathSegments as $index => $segment) {
+                $relativeImagePathSegments[$index] = \rawurlencode($segment);
+            }
+
+            $paths[1] = implode('/', $relativeImagePathSegments);
+
+            $path = implode('/', $paths);
+            if (isset($urlInfo['query'])) {
+                $path .= "?{$urlInfo['query']}";
+            }
+
+            $encodedPath = '';
+
+            if (isset($urlInfo['scheme'])) {
+                $encodedPath = "{$urlInfo['scheme']}://";
+            }
+
+            if (isset($urlInfo['host'])) {
+                $encodedPath .= "{$urlInfo['host']}";
+            }
+
+            if (isset($urlInfo['port'])) {
+                $encodedPath .= ":{$urlInfo['port']}";
+            }
+
+            return $encodedPath . $path;
         }
 
-        $paths[0] .= '/media';
-
-        $relativeImagePath = $paths[1];
-
-        $relativeImagePathSegments = explode('/', $relativeImagePath);
-        foreach ($relativeImagePathSegments as $index => $segment) {
-            $relativeImagePathSegments[$index] = \rawurlencode($segment);
-        }
-
-        $paths[1] = implode('/', $relativeImagePathSegments);
-
-        $path = implode('/', $paths);
-        if (isset($urlInfo['query'])) {
-            $path .= "?{$urlInfo['query']}";
-        }
-
-        $encodedPath = '';
-
-        if (isset($urlInfo['scheme'])) {
-            $encodedPath = "{$urlInfo['scheme']}://";
-        }
-
-        if (isset($urlInfo['host'])) {
-            $encodedPath .= "{$urlInfo['host']}";
-        }
-
-        if (isset($urlInfo['port'])) {
-            $encodedPath .= ":{$urlInfo['port']}";
-        }
-
-        return $encodedPath . $path;
+        return $mediaUrl;
     }
 }
