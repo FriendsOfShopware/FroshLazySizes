@@ -1,5 +1,6 @@
 name: PackPlugin
 on:
+  workflow_dispatch:
   push:
     branches:
       - v1
