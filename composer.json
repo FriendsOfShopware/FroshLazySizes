@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "shopware/core": "^6.4.10"
+        "shopware/core": "~6.4.10"
     },
     "extra": {
         "shopware-plugin-class": "Frosh\\LazySizes\\FroshLazySizes",
