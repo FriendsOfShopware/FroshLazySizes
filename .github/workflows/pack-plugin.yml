@@ -7,10 +7,9 @@ on:
 
 jobs:
   build:
-    uses: FriendsOfShopware/actions/.github/workflows/store.yml@main
+    uses: FriendsOfShopware/actions/.github/workflows/store-shopware-cli.yml@main
     with:
       extensionName: FroshLazySizes
-      shopwareVersion: '6.4.10'
     secrets:
       accountUser: ${{ secrets.ACCOUNT_USER }}
       accountPassword: ${{ secrets.ACCOUNT_PASSWORD }}
