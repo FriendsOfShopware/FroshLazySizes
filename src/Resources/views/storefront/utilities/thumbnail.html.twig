@@ -54,7 +54,7 @@
                 data-srcset="{{ srcsetValue }}"
                 data-sizes="auto"
                 data-aspectratio="{{ ratio }}"
-                {% if fit %}data-parent-fit="{{ parentFit }}"{% endif %}
+                {% if parentFit %}data-parent-fit="{{ parentFit }}"{% endif %}
             {% endif %}
             {% for key, value in attributes %}
                 {{ key }}="{{ value }}"
