@@ -38,10 +38,7 @@
         {% set attributes = attributes|merge({'style': inlineStyle}) %}
     {% endif %}
 
-    {% set parentFit = false %}
-    {% if attributes['data-object-fit'] %}
-        {% set parentFit = attributes['data-object-fit'] %}
-    {% endif %}
+    {% set parentFit = parentFit ?? attributes['data-object-fit'] ?? false %}
 
     {% block thumbnail_utility_img %}
         {% if src is not defined %}
