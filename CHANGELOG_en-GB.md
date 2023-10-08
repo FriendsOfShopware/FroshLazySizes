@@ -1,3 +1,8 @@
+# 1.0.3
+
+* Add configuration to calculate better sizes and ratio to introduce better support for FroshPlatformThumbnailProcessor
+* Use object-fit given into thumbnail utility
+
 # 1.0.2
 
 * Rebuild assets for shopware 6.4
