@@ -1,3 +1,8 @@
+# 2.0.2
+
+* Add configuration to calculate better sizes and ratio to introduce better support for FroshPlatformThumbnailProcessor
+* Use object-fit given into thumbnail utility
+
 # 2.0.1
 
 * Fix encoding for images in folder thumbnail
