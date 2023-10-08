@@ -40,6 +40,10 @@
 
     {% set parentFit = parentFit ?? attributes['data-object-fit'] ?? false %}
 
+    {% if not config('FroshLazySizes.config.UseAdvancedRatio') %}
+        {% set ratio = max(1, ratio) %}
+    {% endif %}
+
     {% block thumbnail_utility_img %}
         {% if src is not defined %}
             {% set src = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' %}

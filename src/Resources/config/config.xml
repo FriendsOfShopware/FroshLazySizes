@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
+    <card>
+        <title>Configuration</title>
+        <title lang="de-DE">Konfiguration</title>
+
+        <input-field type="bool">
+            <name>UseAdvancedRatio</name>
+            <label>Calculate better ratio</label>
+            <label lang="de-DE">Berechne verbesserte Ratio</label>
+            <helpText>Activating this will lead to more suitable sizes in storefront, if you are using thumbnails without limited height.
+                Default shopware thumbnail sizes are limited by height regarding the setting in admin.
+                Plugins like ThumbnailProcessor ignore the height for the thumbnail and just use the defined width to calculate the proportional thumbnail.</helpText>
+            <helpText lang="de-DE">
+                Aktivieren dieser Option führt zu besseren Thumbnail-Größen im Storefront, wenn Sie Thumbnails ohne begrenzte Höhe verwenden.
+                Die Standard-Shopware-Thumbnail-Größen sind in Bezug auf die Einstellung im Admin durch die Höhe begrenzt.
+                Plugins wie ThumbnailProcessor ignorieren die Höhe des Thumbnails und verwenden nur die definierte Breite, um das proportionale Thumbnail zu berechnen.
+            </helpText>
+            <defaultValue>false</defaultValue>
+        </input-field>
+    </card>
+</config>
