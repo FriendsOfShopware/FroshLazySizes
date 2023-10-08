@@ -38,6 +38,8 @@
         {% set attributes = attributes|merge({'style': inlineStyle}) %}
     {% endif %}
 
+    {% set parentFit = parentFit ?? attributes['data-object-fit'] ?? false %}
+
     {% block thumbnail_utility_img %}
         {% if src is not defined %}
             {% set src = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' %}
@@ -49,7 +51,7 @@
                 data-srcset="{{ srcsetValue }}"
                 data-sizes="auto"
                 data-aspectratio="{{ ratio }}"
-                data-parent-fit="contain"
+                {% if parentFit %}data-parent-fit="{{ parentFit }}"{% endif %}
             {% endif %}
             {% for key, value in attributes %}
                 {{ key }}="{{ value }}"
