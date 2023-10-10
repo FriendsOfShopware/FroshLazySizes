@@ -29,7 +29,7 @@
         {% endif %}
     {% endif %}
 
-    {% set ratio = metaProportion.width|default(1) / metaProportion.height|default(1) %}
+    {% set ratio = metaProportion.width / metaProportion.height|default(1) %}
 
     {% set inlineStyle = "aspect-ratio:" ~ ratio ~ ";" %}
     {% if attributes.style %}
@@ -39,6 +39,9 @@
     {% endif %}
 
     {% set parentFit = parentFit ?? attributes['data-object-fit'] ?? false %}
+    {% if not parentFit and 'product-image' in attributes.class and 'is-standard' in attributes.class %}
+        {% set parentFit = 'contain' %}
+    {% endif %}
 
     {% if not config('FroshLazySizes.config.UseAdvancedRatio') %}
         {% set ratio = max(1, ratio) %}
