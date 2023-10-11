@@ -1,3 +1,7 @@
+# 2.0.3
+
+* Fix image presentation on Safari browser
+
 # 2.0.2
 
 * Add configuration to calculate better sizes and ratio to introduce better support for FroshPlatformThumbnailProcessor
