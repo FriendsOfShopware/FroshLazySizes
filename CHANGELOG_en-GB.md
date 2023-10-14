@@ -1,3 +1,7 @@
+# 2.0.4
+
+* Add ability to disable lazysizes through cms section or block or variable
+
 # 2.0.3
 
 * Fix image presentation on Safari browser
