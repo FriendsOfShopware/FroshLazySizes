@@ -6,7 +6,7 @@
         "thumbnail"
     ],
     "description": "Automatically calculate the best thumbnail size. This means you don't have to worry about the \"sizes\" attribute for the images. Additionally, you gain a score.",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "type": "shopware-platform-plugin",
     "license": "mit",
     "authors": [
