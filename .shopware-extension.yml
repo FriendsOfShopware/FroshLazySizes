@@ -18,11 +18,11 @@ store:
     de:
       - thumbnail
       - performance
-      - lazyloading
+      - lazy loading
     en:
       - thumbnail
       - performance
-      - lazyloading
+      - lazy loading
   features:
     de:
       - Passende Thumbnail-Größen werden dem Browser berechnet
