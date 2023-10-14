@@ -27,6 +27,21 @@ https://github.com/FriendsOfShopware/FroshLazySizes/releases/latest/download/Fro
 - then run the command `bin/console media:generate-thumbnails` on the console to update the thumbnails for all images in the database
 - Clear shop cache
 
+## Selectively deactivate plugins lazysizes and lazyloading function
+This might be useful to optimize loading images `above the fold` or if you don't like to use the plugin for specific images or tooltip.
+
+### Specific images
+Add variable `lazysizes` with value `false` before using `sw_thumbnails` in the template.
+
+### Cms sections
+Add css class `no-lazysizes` to your sections
+
+### Cms blocks
+Add css class `no-lazysizes` to your block
+
+#### Overwrite `no-lazysizes` of sections class in block
+Add class `lazysizes` to your block
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE) for more information.
