@@ -29,7 +29,7 @@ store:
     en:
       - Appropriate thumbnail sizes are calculated by the browser
   images:
-    - file: src/Resources/store/1.jpg
+    - file: src/Resources/store/images/1.jpg
       activate:
         de: true
         en: true
@@ -37,7 +37,7 @@ store:
         de: true
         en: true
       priority: 0
-    - file: src/Resources/store/2.png
+    - file: src/Resources/store/images/2.png
       activate:
         de: true
         en: true
