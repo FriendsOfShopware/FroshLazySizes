@@ -6,7 +6,7 @@
         "thumbnail"
     ],
     "description": "Automatically calculate the best thumbnail size. This means you don't have to worry about the \"sizes\" attribute for the images. Additionally, you gain a score.",
-    "version": "2.0.4",
+    "version": "2.0.5",
     "type": "shopware-platform-plugin",
     "license": "mit",
     "authors": [
@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "shopware/core": "~6.5.0"
+        "shopware/core": "~6.5.0|~6.6.0"
     },
     "extra": {
         "shopware-plugin-class": "Frosh\\LazySizes\\FroshLazySizes",
@@ -47,5 +47,8 @@
         "allow-plugins": {
             "symfony/runtime": true
         }
+    },
+    "scripts": {
+        "cs-fix": "docker run --rm -v $(pwd):$(pwd) -w $(pwd) oskarstark/php-cs-fixer-ga --rules @PER-CS2.0,@PER-CS2.0:risky --allow-risky=yes ."
     }
 }

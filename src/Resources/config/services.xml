@@ -5,8 +5,7 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <service id="Frosh\LazySizes\Storefront\Framework\Twig\Extension\UrlEncodingTwigFilter" public="false">
-            <tag name="twig.extension"/>
-        </service>
+        <defaults autowire="true" autoconfigure="true" />
+        <prototype namespace="Frosh\LazySizes\" resource="../../" exclude="../../{FroshLazySizes.php}" />
     </services>
 </container>
