@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Frosh\LazySizes\Storefront\Framework\Twig\Extension;
 
-use Shopware\Core\Content\Media\MediaEntity;
 use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
