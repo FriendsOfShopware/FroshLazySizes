@@ -5,6 +5,7 @@
         {% set lazysizesThroughCss = null %}
         {% for item in [sectionClasses, blockClasses] %}
             {% if item is defined %}
+                {% set item = item|join(' ')|split(' ') %}
                 {% if 'no-lazysizes' in item %}
                     {% set lazysizesThroughCss = false %}
                 {% elseif 'lazysizes' in item %}
