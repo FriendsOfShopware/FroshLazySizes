@@ -1,3 +1,28 @@
-{% apply spaceless %}
-    {% sw_include '@FroshLazySizes/storefront/utilities/thumbnail-lazysize.html.twig' %}
-{% endapply %}
+{% sw_extends "@Storefront/storefront/utilities/thumbnail.html.twig" %}
+
+{% block thumbnail_utility %}{% apply spaceless %}
+    {% if lazysizes is not defined %}
+        {% set lazysizesThroughCss = null %}
+        {% for item in [sectionClasses, blockClasses] %}
+            {% if item is defined %}
+                {# Yes, item is an array!
+                Therefore we need to combine any entry and convert it back to array #}
+                {% set item = item|join(' ')|split(' ') %}
+
+                {% if 'no-lazysizes' in item %}
+                    {% set lazysizesThroughCss = false %}
+                {% elseif 'lazysizes' in item %}
+                    {% set lazysizesThroughCss = true %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+    {% set lazysizes = lazysizes ?? lazysizesThroughCss ?? true %}
+
+    {% if lazysizes %}
+        {% sw_include '@FroshLazySizes/storefront/utilities/thumbnail-lazysize.html.twig' %}
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endapply%}{% endblock %}
