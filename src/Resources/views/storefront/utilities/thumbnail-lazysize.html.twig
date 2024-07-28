@@ -24,7 +24,7 @@
         {% if thumbnails %}
             {# generate srcset with all available thumbnails #}
             {% set srcsetValue %}{% apply spaceless %}
-                {{ media.url|frosh_encode_url }} {{ thumbnails|first.width + 1 }}w, {% for thumbnail in thumbnails %}{{ thumbnail.url|frosh_encode_url }} {{ thumbnail.width }}w{% if not loop.last %}, {% endif %}{% endfor %}
+                {{ media.url|sw_encode_url }} {{ thumbnails|first.width + 1 }}w, {% for thumbnail in thumbnails %}{{ thumbnail.url|sw_encode_url }} {{ thumbnail.width }}w{% if not loop.last %}, {% endif %}{% endfor %}
             {% endapply %}{% endset %}
         {% endif %}
     {% endif %}
@@ -53,7 +53,7 @@
         {% endif %}
 
         <img src="{{ src }}"
-            data-src="{{ media.url|frosh_encode_url }}"
+            data-src="{{ media.url|sw_encode_url }}"
             {% if srcsetValue %}
                 data-srcset="{{ srcsetValue }}"
                 data-sizes="auto"
@@ -63,7 +63,7 @@
             {% for key, value in attributes %}
                 {{ key }}="{{ value }}"
                 {% if key == 'itemprop' %}
-                    content="{{ media.url|frosh_encode_url }}"
+                    content="{{ media.url|sw_encode_url }}"
                 {% endif %}
             {% endfor %}
         />
