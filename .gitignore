@@ -4,3 +4,4 @@
 src/Resources/app/storefront/dist/storefront/js/
 src/Resources/public
 src/Resources/app/storefront/node_modules/
+src/Resources/app/storefront/package-lock.json
