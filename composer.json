@@ -49,6 +49,7 @@
         }
     },
     "scripts": {
-        "cs-fix": "docker run --rm -v $(pwd):$(pwd) -w $(pwd) oskarstark/php-cs-fixer-ga --rules @PER-CS2.0,@PER-CS2.0:risky --allow-risky=yes ."
+        "format": "docker run --rm -v $(pwd):/ext shopware/shopware-cli:latest extension format /ext",
+        "check": "docker run --rm -v $(pwd):/ext shopware/shopware-cli:latest extension validate --full /ext"
     }
 }
