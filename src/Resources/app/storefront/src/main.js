@@ -10,7 +10,9 @@ document.addEventListener('lazybeforesizes', (e) => {
     }
 
     if (e.detail.width === parseFloat(aspectRatio)) {
-        e.detail.width = e.detail.instance.parentFit.getFit(e.target).parent.clientWidth;
+        e.detail.width = e.detail.instance.parentFit.getFit(
+            e.target
+        ).parent.clientWidth;
     }
 
     e.detail.width = Math.round(e.detail.width);

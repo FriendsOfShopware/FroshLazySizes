@@ -6,4 +6,6 @@ namespace Frosh\LazySizes;
 
 use Shopware\Core\Framework\Plugin;
 
-class FroshLazySizes extends Plugin {}
+class FroshLazySizes extends Plugin
+{
+}
