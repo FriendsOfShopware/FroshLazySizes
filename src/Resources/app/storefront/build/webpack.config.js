@@ -1,4 +1,3 @@
-// eslint-disable-next-line func-names
 module.exports = function (params) {
     return {
         resolve: {
