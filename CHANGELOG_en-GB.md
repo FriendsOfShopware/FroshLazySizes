@@ -1,0 +1,11 @@
+# 3.2.0
+- [chore: prepare release 3.1.1](https://github.com/FriendsOfShopware/FroshLazySizes/commit/95f68b0)
+- [chore: remove phpstan config comments](https://github.com/FriendsOfShopware/FroshLazySizes/commit/3d1c9c1)
+- [chore: adjust version constraint](https://github.com/FriendsOfShopware/FroshLazySizes/commit/cfeb257)
+- [chore: update scripts](https://github.com/FriendsOfShopware/FroshLazySizes/commit/1154240)
+- [chore: add package-lock.json to .gitignore](https://github.com/FriendsOfShopware/FroshLazySizes/commit/8664342)
+- [chore: remove unused eslint-disable directive](https://github.com/FriendsOfShopware/FroshLazySizes/commit/689812e)
+- [chore: code style format](https://github.com/FriendsOfShopware/FroshLazySizes/commit/43b3cf2)
+- [fix: remove phpstan type_coverage config](https://github.com/FriendsOfShopware/FroshLazySizes/commit/a188238)
+- [chore: increase version range](https://github.com/FriendsOfShopware/FroshLazySizes/commit/633bd64)
+- [chore: update code-style pipeline](https://github.com/FriendsOfShopware/FroshLazySizes/commit/c04edfd)
